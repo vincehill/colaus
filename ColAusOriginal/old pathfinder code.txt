@@ -1,0 +1,188 @@
+	int minPathLength(CPoint from,
+					  CPoint to,
+					  MatrixType &m,
+					  bool cross_diagonal,
+					  int m_radius,
+					  int curr_path_length);
+
+int pathFinder::minPathLength(CPoint from,
+				  CPoint to,
+				  MatrixType &m,
+				  bool cross_diagonal,
+				  int m_radius,
+				  int curr_path_length)
+{
+	for (int tab_level = 0; tab_level < curr_path_length; tab_level++)
+		testFile << "  ";
+
+	testFile << "Searching from: (" << from.x << "," << from.y << ")" << endl;
+    
+	curr_path_length++;
+
+	if (from == to)
+	{
+		for (int tab_level = 0; tab_level < curr_path_length; tab_level++)
+			testFile << "  ";
+		testFile << "Destination found,";
+		testFile << " exiting with path length: " << curr_path_length << endl;
+		printMatrix(m);
+		if ( (curr_path_length <= MAX_RECORDED_PATH)
+		&&   (curr_path_length <= min_path_length) )
+			path[curr_path_length - 1] = from;
+		if (curr_path_length < min_path_length)
+			min_path_length = curr_path_length;
+		printPath();
+		return curr_path_length;
+	}
+
+	//ensure this square cannot be visited again
+	m.matrix[from.x][from.y] = false;
+	
+	int candidate[9] = {MAX_INT,MAX_INT,MAX_INT,
+		                MAX_INT,MAX_INT,MAX_INT,
+						MAX_INT,MAX_INT,MAX_INT};
+	CPoint new_loc(0,0);
+	int cand_no = 0;
+
+	//need to chose starting position, condition and operation based on
+	//relationship between current position and destination
+
+	int i_start, j_start, i_increment, j_increment;
+	i_start = j_start = -1;
+	i_increment = j_increment = 1;
+
+	if (to.x > from.x)
+	{
+		i_start = 1;
+		i_increment = -1;
+	}
+
+	if (to.y > from.y)
+	{
+		j_start = 1;
+		j_increment = -1;
+	}
+
+	for (int i_offset = i_start; abs(i_offset) < 2; i_offset += i_increment)
+	{
+		for (int j_offset = j_start; abs(j_offset) < 2; j_offset += j_increment) 
+		{
+			new_loc.SetPoint(from.x + i_offset,from.y + j_offset);
+			if ( (new_loc.x >= 0) && (new_loc.x < MAX_MATRIX_SIZE)
+			&&   (new_loc.y >= 0) && (new_loc.y < MAX_MATRIX_SIZE) 
+			&&   (new_loc.x <  m_radius) && (new_loc.y <  m_radius) )
+			{
+				if ( (m.matrix[new_loc.x][new_loc.y])
+				&&   ( (i_offset != 0) || (j_offset != 0) ) )
+				{
+					//check diagonals
+					if ( (abs(j_offset) == 1) 
+					&&   (abs(i_offset) == 1)
+					&&   (!cross_diagonal) )
+					{
+						if (    (m.matrix[from.x + i_offset][from.y])
+						     || (m.matrix[from.x][from.y + j_offset]) )
+						candidate[cand_no] = 
+							minPathLength(new_loc,to,m,cross_diagonal,m_radius,curr_path_length);
+					}
+					else
+						candidate[cand_no] = 
+							minPathLength(new_loc,to,m,cross_diagonal,m_radius,curr_path_length);
+
+				}
+			}
+			cand_no++;
+		}
+	}
+
+	int minimum = MAX_INT;
+	cand_no = 0;
+	for (cand_no = 0; cand_no < 9; cand_no++)
+	{
+		if (candidate[cand_no] < minimum)  
+			minimum = candidate[cand_no];
+	}
+
+	if ( (curr_path_length < MAX_RECORDED_PATH)
+	&&   (minimum <= min_path_length)
+	&&   (minimum < MAX_INT) )
+		path[curr_path_length - 1] = from;
+
+	if (minimum < min_path_length)
+		min_path_length = minimum;
+
+	for (int tab_level = 0; tab_level < curr_path_length; tab_level++)
+		testFile << "  ";
+	testFile << "Exiting ";
+	testFile << "from: (" << from.x << "," << from.y << ")";
+	testFile << ", shortest path had length: " << minimum << endl;
+	for (int tab_level = 0; tab_level < curr_path_length; tab_level++)
+		testFile << "  ";
+	printPath();
+
+	return minimum;
+}
+
+
+	//these are the three options specifying the order a row should be searched on
+	//middle_first = {0,-1, 1};
+	//in_order     = {-1,0, 1};
+	//rev_order    = {1, 0,-1};
+	int order_matrix[3][3] = 
+	{ {0,-1,1},
+	  {-1,0,1},
+	  {1,0,-1}
+	};
+
+	int horiz_order = 0;
+	int vert_order = 0;
+
+	int i_offset, j_offset;
+
+	if (to.x > from.x)
+		horiz_order = 2;
+	else if (to.x < from.x)
+		horiz_order = 1;
+
+	if (to.y > from.y)
+		vert_order = 2;
+	else if (to.y < from.y)
+		vert_order = 1;
+
+	for (int i=0; i < 3; i++)
+	{
+		i_offset = order_matrix[horiz_order][i];
+		for (int j=0; j < 3; j++) 
+		{
+			j_offset = order_matrix[vert_order][j];
+			new_loc.SetPoint(from.x + i_offset,from.y + j_offset);
+			if ( (new_loc.x >= 0) && (new_loc.x < MAX_MATRIX_SIZE)
+			&&   (new_loc.y >= 0) && (new_loc.y < MAX_MATRIX_SIZE) 
+			&&   (new_loc.x <  m_radius) && (new_loc.y <  m_radius) )
+			{
+				if ( (m.matrix[new_loc.x][new_loc.y])
+				&&   ( (i_offset != 0) || (j_offset != 0) ) )
+				{
+					//check diagonals
+					if ( (abs(j_offset) == 1) 
+					&&   (abs(i_offset) == 1)
+					&&   (!cross_diagonal) )
+					{
+						if (    (m.matrix[from.x + i_offset][from.y])
+						     || (m.matrix[from.x][from.y + j_offset]) )
+						candidate[cand_no] = 
+							minPathLength2(new_loc,to,m,cross_diagonal,m_radius,curr_path_length);
+					}
+					else
+						candidate[cand_no] = 
+							minPathLength2(new_loc,to,m,cross_diagonal,m_radius,curr_path_length);
+
+				}
+				//if destination found then don't search other squares from this location
+				if (new_loc == to)
+					j_offset = i_offset = MAX_INT;
+			}
+			cand_no++;
+		}
+	}
+

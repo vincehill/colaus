@@ -1,0 +1,669 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Paint1.ico"
+IDR_Paint1TYPE          ICON                    "res\\Paint1Doc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "VinceGames Ltd"
+            VALUE "FileDescription", "Col-ausn-isation"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Paint1.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "Paint1.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Let's Colonise Australia!\n\nPaint1\n\n\nPaint1.Document\nPaint1.Document"
+    IDS_ERR_READ            "An error occurred that prevented the file from being read."
+    IDS_ERR_EOF             "The file did not contain enough data, or was empty."
+    IDS_ERR_MAP_CREATE      "An error occurred while creating the game map."
+    IDS_ERR_OPEN            "An error occurred that prevented the file from being opened."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Col-Ausn-isation"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    IDS_ERR_INVALID         "The file selected is corrupted, or not a valid Colonization Map file."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LAND                BITMAP                  "res\\Plains.bmp"
+IDB_SEA                 BITMAP                  "res\\Sea.bmp"
+IDB_UNDISCOVERED        BITMAP                  "res\\Undiscovered.bmp"
+IDB_UNDISCOVERED_MASK   BITMAP                  "res\\Undiscovered mask.bmp"
+IDB_COASTAL_MASK        BITMAP                  "res\\Coastal - mono mask with gridv2.bmp"
+IDB_COASTAL             BITMAP                  "res\\Coastal shapesv2.bmp"
+IDB_LAND_TERRAIN_TYPES  BITMAP                  "res\\Terrain squaresv5.bmp"
+IDB_TERR_BLEND_MASK     BITMAP                  "res\\Terrain blend masksv3.bmp"
+IDB_MOUNTAINS           BITMAP                  "res\\Mountains.bmp"
+IDB_MOUNTAINS_MASK      BITMAP                  "res\\Mountains mask mono.bmp"
+IDB_FORESTS             BITMAP                  "res\\Forests.bmp"
+IDB_FORESTS_MASK        BITMAP                  "res\\Forests mask mono.bmp"
+IDB_HILLS               BITMAP                  "res\\Hills.bmp"
+IDB_HILLS_MASK          BITMAP                  "res\\Hills mask mono.bmp"
+IDB_BACKGROUND          BITMAP                  "res\\background.bmp"
+IDB_MNRIVERS            BITMAP                  "res\\MinRivers.bmp"
+IDB_MNRIVERS_MASK       BITMAP                  "res\\MinRivers mask mono.bmp"
+IDB_COASTAL_RIVER       BITMAP                  "res\\Coastal River.bmp"
+IDB_COASTAL_RIVER_MASK  BITMAP                  "res\\Coastal River Mask mono.bmp"
+IDB_PIECES              BITMAP                  "res\\Pieces.bmp"
+IDB_PIECES_MASK         BITMAP                  "res\\Pieces Mono Mask.bmp"
+IDB_PIECES_COLORS       BITMAP                  "res\\Pieces_colors.bmp"
+IDB_NEW_COLONY          BITMAP                  "res\\NewColony.bmp"
+IDB_JANSSON_MAP         BITMAP                  "res\\Jan_Jansson_1657.bmp"
+IDB_MNRIVERS_OCEAN      BITMAP                  "res\\MinRiversOcean.bmp"
+IDB_TAG_TEXT            BITMAP                  "res\\Tag Text mono.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Game Options",                ID_FILE_GAMEOPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "Active Piece",                ID_VIEW_ACTIVEPIECE
+    END
+    POPUP "Actions"
+    BEGIN
+        MENUITEM "End Turn",                    ID_ACTIONS_ENDTURN
+        MENUITEM SEPARATOR
+        MENUITEM "&Skip",                       ID_ACTIONS_SKIP
+        MENUITEM "&Wait",                       ID_ACTIONS_WAIT
+        MENUITEM "&Disband",                    ID_ACTIONS_DISBAND
+        MENUITEM "S&leep",                      ID_ACTIONS_SLEEP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ColAus",               ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        POPUP "Encyclopedia"
+        BEGIN
+            MENUITEM "Pieces",                      ID_ENCYCLOPEDIA_PIECES
+        END
+    END
+    POPUP "Test"
+    BEGIN
+        MENUITEM "Hide unexplored",             ID_TEST_HIDE_UNEXPLORED
+        , CHECKED
+        MENUITEM "New Map",                     ID_TEST_NEWMAP
+        MENUITEM "Add piece",                   ID_TEST_ADDPIECE
+        MENUITEM "Activate Timer",              ID_TEST_ACTIVATETIMER
+        MENUITEM "Synch. Maps",                 ID_TEST_SYNCH
+        POPUP "Piece animate delay"
+        BEGIN
+            MENUITEM "Increase",                    ID_PIECEANIMATE_INCREASE
+            MENUITEM "Decrease",                    ID_PIECEANIMATE_DECREASE
+        END
+        MENUITEM "Display Map Statistic",       220
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,18,24,21,20
+    LTEXT           "Colonise Australia Version 0.01",IDC_STATIC,49,36,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright Vince (C) 2004",IDC_STATIC,49,52,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,35,50,16,WS_GROUP
+    CTEXT           "About Colonise Australia",IDC_STATIC_TITLE,7,7,221,15
+END
+
+IDD_NEW_RAND_MAP DIALOGEX 0, 0, 297, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Random Map Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,90,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,129,50,14
+    CONTROL         "",IDC_NM_WIDTH_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,15,26,54,20
+    LTEXT           "Width",IDC_NM_WIDTH_STATIC1,17,16,35,8
+    EDITTEXT        IDC_NM_WIDTH_EDIT,61,14,21,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NM_HEIGHT_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,77,26,54,20
+    LTEXT           "Height",IDC_NM_HEIGHT_STATIC,85,16,35,8
+    EDITTEXT        IDC_NM_HEIGHT_EDIT,118,14,21,12,ES_AUTOHSCROLL
+    GROUPBOX        "Map Size",IDC_NM_SIZE_STATIC,7,7,133,50
+    CONTROL         "",IDC_NM_TEMP_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,15,79,54,20
+    LTEXT           "Temperature",IDC_NM_CLIMATE_TEMP_STATIC,16,68,41,8
+    EDITTEXT        IDC_NM_CLIMATE_TEMP_EDIT,61,66,21,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NM_RAIN_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,77,79,54,20
+    LTEXT           "Rainfall",IDC_NM_HEIGHT_STATIC2,83,68,35,8
+    EDITTEXT        IDC_NM_WIDTH_EDIT4,117,67,21,12,ES_AUTOHSCROLL
+    GROUPBOX        "Climate",IDC_NM_CLIMATE_STATIC,7,60,133,50
+    CONTROL         "",IDC_NM_CONTSIZE_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,165,26,54,20
+    LTEXT           "Continent Size",IDC_NM_CONTSIZE_STATIC,162,16,62,8
+    EDITTEXT        IDC_NM_CONTSIZE_EDIT,211,14,21,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NM_ALTITIDE_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,227,26,54,20
+    LTEXT           "Altitude",IDC_NM_ALTITUDE_STATIC,235,16,35,8
+    EDITTEXT        IDC_NM_ALTITUDE_EDIT,268,14,21,12,ES_AUTOHSCROLL
+    GROUPBOX        "Land Mass",IDC_NM_LANDMASS_STATIC,157,7,133,102
+    CONTROL         "",IDC_NM_LANDPTS_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,167,78,54,20
+    LTEXT           "Land Points",IDC_NM_LANDPTS_STATIC,163,68,62,8
+    EDITTEXT        IDC_NM_LANDPTS_EDIT,213,66,21,12,ES_AUTOHSCROLL
+END
+
+IDD_GAME_OPTS_DLG DIALOGEX 50, 50, 254, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Game Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,61,121,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,147,121,50,14
+    CONTROL         "Automatically end turns",IDC_AUTO_END_TURN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,17,91,7
+    COMBOBOX        IDC_SCREEN_RES,148,27,89,41,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Screen Resolution",IDC_STATIC,148,17,64,9
+    CONTROL         "Animate piece moves",IDC_GO_ANIMATE_PIECE_MOVES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,25,80,12
+END
+
+IDD_ADD_PIECE DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add Piece"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,28,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,69,50,14
+    LTEXT           "Type:",IDC_STATIC,31,7,21,12
+    LTEXT           "Owner:",IDC_STATIC,94,7,27,12
+    LTEXT           "X:",IDC_STATIC,50,40,21,12
+    LTEXT           "Y:",IDC_STATIC,100,40,21,12
+    EDITTEXT        IDC_EDIT_X,61,38,30,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_Y,110,38,31,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_TYPE,55,7,22,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_OWNER,123,7,22,13,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "Location",IDC_STATIC,26,24,129,34
+END
+
+IDD_CONFIRM_ATTACK DIALOGEX 0, 0, 261, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes, we shall crush the foul smelling <name>",IDOK,7,55,
+                    247,14
+    PUSHBUTTON      "Never, that would be treachery",IDCANCEL,7,68,247,14
+END
+
+IDD_RESOLVE_ATTACK DIALOGEX 0, 0, 344, 115
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_SYSMENU
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_ATTACK_PIECE,"Static",SS_BITMAP | SS_CENTERIMAGE,
+                    31,33,32,30,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",IDOK,149,94,50,14
+    CONTROL         "",IDC_DEFEND_PIECE,"Static",SS_BITMAP | SS_CENTERIMAGE,
+                    185,34,32,30
+    CTEXT           "Conflict Analysis",IDC_STATIC_TITLE,97,7,160,16,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_COL_MSGBOX DIALOGEX 0, 0, 279, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,114,60,50,14
+END
+
+IDD_NEW_GAME_DLG DIALOGEX 0, 0, 408, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,277,220,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,338,220,50,14
+    LTEXT           "New Game",IDC_DLG_TITLE,153,7,100,14
+END
+
+IDD_MAP_STATS DIALOGEX 0, 0, 166, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Display Map Statistic"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,26,114,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,89,114,50,14
+    CONTROL         "None",IDC_NONE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    44,17,70,10
+    CONTROL         "Altitude",IDC_ALTITUDE,"Button",BS_AUTORADIOBUTTON,44,
+                    31,74,10
+    CONTROL         "Terrain Type",IDC_TERRAIN_TYPE,"Button",
+                    BS_AUTORADIOBUTTON,44,45,79,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_NEW_RAND_MAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_GAME_OPTS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_ADD_PIECE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CONFIRM_ATTACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_RESOLVE_ATTACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_COL_MSGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_NEW_GAME_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 401
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_MAP_STATS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Paint1.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_NEWGAMEDLG     HTML                    "NewGameDlg.htm"
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Paint1.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

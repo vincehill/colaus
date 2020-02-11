@@ -1,0 +1,3 @@
+Attacker GetWindowRect: (103,53),  (152,101), 
+CHMXDialog GetClientRect: (0,0),  (187,516), 
+CHMXDialog GetWindowRect: (46,3),  (239,525), 

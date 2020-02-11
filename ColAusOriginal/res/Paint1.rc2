@@ -1,0 +1,16 @@
+//
+// Paint1.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+Little_Gun WAVE D:\SOUNDS\LILGUN.wav
+LGun2 WAVE SOUNDS\LILGUN.wav
+Ship_Sink WAVE D:\SOUNDS\SHIPSINK.wav
+Botany_Bay MIDI SOUNDS\botany_bay.mid
+/////////////////////////////////////////////////////////////////////////////

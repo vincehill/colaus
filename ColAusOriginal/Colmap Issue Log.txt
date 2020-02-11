@@ -1,0 +1,16 @@
+Issues:
+
+some map squares have 'Paint backround' as black.
+
+*Fixed*Clicking on a piece does not activate it if is outside the top left
+hand corner of the map.
+
+When a players turn commences, there should be an active piece, and the
+map should have automatically centred to that point.
+*Fixed*
+
+*Fixed*When passing by other pieces the 'animateMove' function does not draw the 
+other pieces.
+
+When a piece has no moves left, the display does not switch to the players
+next piece until a successful move is applied to that piece...
